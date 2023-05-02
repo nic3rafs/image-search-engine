@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 
 ## Demo
 [Link to demo video on YouTube](https://youtu.be/fsMwXCDvFIY)
-<a href="https://ibb.co/QYKHJLr"><img src="https://i.ibb.co/QYKHJLr/Screenshot-2023-05-02-at-11-23-48-AM.png" alt="Screenshot-2023-05-02-at-11-23-48-AM" border="0"></a>
+![Screenshot](https://ibb.co/QYKHJLr)
 
 ## Usage
 - Click the "Upload images ↓" button to open the file input
