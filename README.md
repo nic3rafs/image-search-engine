@@ -21,7 +21,7 @@ To set up the project locally, follow these steps:
 1. Go to the server folder: `cd server`
 2. Install all dependencies: `npm i`
   
->If you want to run Weaviate locally in Docker:
+>I suggest you to run Weaviate locally in Docker:
 >- Go to the Weaviate folder: `cd weaviate`
 >- Download Docker images and run a container: `docker-compose up -d`
 
