@@ -3,10 +3,27 @@ import { Inter } from "next/font/google";
 import Gallery from "@/components/Gallery";
 import Controllers from "@/components/Controllers";
 import { logoBlue, logoWhite } from "../assets";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setIsDarkTheme(true);
+    }
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <>
       <main
@@ -14,7 +31,12 @@ export default function Home() {
       >
         <div className="flex  place-content-between mb-6 p-2">
           <div className="flex items-center gap-4 ">
-            <Image src={logoWhite} alt="logo" width={42} height={42} />
+            {isDarkTheme ? (
+              <Image src={logoWhite} alt="logo" width={42} height={42} />
+            ) : (
+              <Image src={logoBlue} alt="logo" width={42} height={42} />
+            )}
+
             <h1 className="text-4xl font-bold  flex gap-44">Image Engine</h1>
           </div>
         </div>
