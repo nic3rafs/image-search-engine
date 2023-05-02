@@ -14,7 +14,7 @@ const toBase64 = (file) => {
 };
 exports.toBase64 = toBase64;
 const weaviateClient = weaviate_ts_client_1.default.client({
-    scheme: "http",
-    host: "localhost:8080",
+    scheme: 'http',
+    host: 'localhost:8080', // Replace with your endpoint
 });
 exports.weaviateClient = weaviateClient;

@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { weaviateClient } from "../utils/utils";
 import { text } from "stream/consumers";
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
 
 type GetImageResponse = {
   class?: string;
@@ -213,12 +215,16 @@ const getSimilarImages = async (req: Request, res: Response) => {
     }
     const b64 = image.properties.image as string;
     //Get similar images with and return text image and id
+    let similarImagesLimit = 5;
+    if (process.env.SIMILAR_IMAGES_LIMIT) {
+      similarImagesLimit = parseInt(process.env.SIMILAR_IMAGES_LIMIT);
+    }
     const result = await weaviateClient.graphql
       .get()
       .withClassName("Image")
       .withFields("text _additional { id }")
       .withNearImage({ image: b64 })
-      .withLimit(5)
+      .withLimit(similarImagesLimit)
       .do();
 
     // console.log("Result:", JSON.stringify(result, null, 2));
