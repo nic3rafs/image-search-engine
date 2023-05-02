@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 
 ## Demo
 [Link to demo video on YouTube](https://youtu.be/fsMwXCDvFIY)
-![Screenshot](https://ibb.co/QYKHJLr)
+![](./Screenshot.png)
 
 ## Usage
 - Click the "Upload images ↓" button to open the file input
@@ -51,6 +51,7 @@ To set up the project locally, follow these steps:
 
 ## Features and Technologies
 - Styled using Tailwind
+- Ligh and dark theme
 - Frontend built with Next.js
 - Image search using the Weaviate vector database and the img2vec-neural vectorizer model
 - Backend powered by Express.js
