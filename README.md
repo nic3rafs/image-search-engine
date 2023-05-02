@@ -7,6 +7,7 @@ This project is a simple TypeScript web application that allows users to upload,
   - [Installation](#installation)
     - [Server setup](#server-setup)
     - [Client setup](#client-setup)
+  - [Demo](#demo)
   - [Usage](#usage)
   - [Features and Technologies](#features-and-technologies)
   - [Notes](#notes)
@@ -34,6 +35,10 @@ To set up the project locally, follow these steps:
 2. Install all dependencies: `npm i`
 3. Run the frontend locally: `npm run dev`
 
+
+## Demo
+[Link to demo video on YouTube](https://youtu.be/fsMwXCDvFIY)
+<a href="https://ibb.co/QYKHJLr"><img src="https://i.ibb.co/QYKHJLr/Screenshot-2023-05-02-at-11-23-48-AM.png" alt="Screenshot-2023-05-02-at-11-23-48-AM" border="0"></a>
 
 ## Usage
 - Click the "Upload images ↓" button to open the file input
