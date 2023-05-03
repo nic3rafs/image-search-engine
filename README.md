@@ -1,5 +1,6 @@
 # Image Search Engine with Weaviate, Express, and Next.js
 This project is a simple TypeScript web application that allows users to upload, display, delete, and find similar images using Next.js for the frontend, Weaviate as the backend for storing image metadata, and Express as an API backend.
+Inspired by the Fireship [video](https://youtu.be/mBcBoGhFndY).
 
 ## Table of Contents
 - [Image Search Engine with Weaviate, Express, and Next.js](#image-search-engine-with-weaviate-express-and-nextjs)
