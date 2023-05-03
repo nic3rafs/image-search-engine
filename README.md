@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 
 
 ## Demo
-[Link to demo video on YouTube](https://youtu.be/fsMwXCDvFIY)
+[Link to demo video on YouTube](https://youtu.be/BWu33mS1nqQ)
 ![](./Screenshot.png)
 
 ## Usage
