@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { weaviateClient } from "../utils/utils";
 import { text } from "stream/consumers";
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config()
+import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config();
 
 type GetImageResponse = {
   class?: string;
@@ -85,6 +85,7 @@ const getImageData = async (req: Request, res: Response) => {
       .withClassName("Image")
       // .withFields("text _additional { id } ")
       .do();
+    console.log("imageData - ", imageData);
 
     if (!imageData) {
       res.status(404).send("Image not found");
@@ -154,7 +155,7 @@ const deleteImage = async (req: Request, res: Response) => {
       .withId(imageId)
       .withClassName("Image")
       .do();
-    
+
     console.log("Weaviate delete response:", response);
 
     res.status(200).send({ message: "Image deleted successfully" });
@@ -163,7 +164,6 @@ const deleteImage = async (req: Request, res: Response) => {
     res.status(500).send("Error deleting image");
   }
 };
-
 
 const updateImage = async (req: Request, res: Response) => {
   const { id } = req.params;

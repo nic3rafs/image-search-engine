@@ -7,9 +7,7 @@ exports.weaviateClient = exports.toBase64 = void 0;
 const fs_1 = __importDefault(require("fs"));
 const weaviate_ts_client_1 = __importDefault(require("weaviate-ts-client"));
 const toBase64 = (file) => {
-    // read binary data
     let bitmap = fs_1.default.readFileSync(file);
-    // convert binary data to base64 encoded string
     return Buffer.from(bitmap).toString("base64");
 };
 exports.toBase64 = toBase64;

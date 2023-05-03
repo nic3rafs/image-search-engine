@@ -59,11 +59,12 @@ const Controllers = () => {
           _additional: {
             id: data.id,
           },
-          text: data.text,
-          image: data.image,
+          text: data.properties.text,
+          image: data.properties.image,
         },
       ],
     };
+    console.log("data - ", data);
     setImages(images);
   };
 
